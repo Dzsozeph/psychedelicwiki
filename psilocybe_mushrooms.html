@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psilocybe Mushrooms (4-HO-DMT)</title>
+</head>
+<style>
+	
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://www.tpoftampa.com/wp-content/uploads/2023/11/psilocybe-mushrooms-turning-point-of-tampa.webp);
+    background-size: cover; 
+	border:medium
+		/*background-repeat: no-repeat;*/
+
+	::-webkit-scrollbar {
+    width: 15px; /* A csúszka szélessége */
+    } 
+		/* Görgetősáv hátterének színe */
+	::-webkit-scrollbar-track {
+    background: rgba(59,54,54,1.00);
+	}
+		/* Görgetősáv csúszkájának színe */
+	::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 255, 255, 0.5), rgba(0, 0, 255, 0.5), rgba(255, 0, 255, 0.5), rgba(255, 0, 0, 0.5)); 
+    }
+		/* Aktív (görgetett) görgetősáv csúszkájának színe */
+	::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+
+	 }
+
+.name-box {
+	top:-3vh;
+	width: 330px;
+	height: 50px;
+	
+	}
+
+.name-box h1 {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	font-style: italic;
+	font-size: 30px;
+    margin-left: 8px;
+	animation: colorChange 5s infinite; /* Animáció alkalmazása: 5 másodperc hosszan, végtelen ismétléssel */
+	padding:3px;
+	border-radius: 5px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-shadow: 2px 2px 4px #000000, -2px -3px 5px #FFFFFF;
+	}
+	
+	@keyframes colorChange {
+ 
+ 0% {
+ color: rgba(208,90,0,1.00);
+  }
+20% {
+	
+ color: rgba(195,14,17,1.00);
+  }
+40% {
+    color: rgba(255,174,0,1.00);
+  }
+60% {
+    color: rgba(16,213,204,1.00);
+  }
+80% {
+    color: rgba(15,215,6,1.00);
+  }
+100% {
+    color: rgba(206,33,223,1.00);
+  }
+}
+	
+h2{
+	
+	font-family: "cursive";
+	font-style: normal;
+	font-size: 25px;
+	margin-left: 16px;
+	font-weight: 800;
+	color:rgba(146,93,16,1.00);
+	
+	}
+	
+p {
+	color:rgba(240,240,240,1.00);
+	font-size: 19px;
+	font-style: normal;
+	font-weight: 500;
+	margin:20px;	 
+	}
+	
+p1 {
+	color:rgba(240,240,240,1.00);
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	margin:20px;	 
+	}
+	
+	
+.container {
+    position: relative;
+    width: 100vw; /* Tetszőleges szélesség */
+    height: 100vh; /* Tetszőleges magasság */  
+    }
+	
+.button-container {
+  text-align: center;
+  position: relative; /* A .button elemek relatív pozícionálódásához szükséges */
+}
+
+.button {
+  background-color: rgba(177,126,14,1.00);
+  left: 188.5vh;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative; /* Relatív pozícióra változtatva */
+}
+	
+	
+.box {
+   position: absolute;
+    }
+
+	
+.molecule-box {
+    top: 10.2vh; /* Tetszőleges távolság a felső széltől */
+    right: 2.5vw; /* Tetszőleges távolság a jobb széltől */
+    width: 250px; /* Tetszőleges szélesség */
+    height: 330px; /* Tetszőleges magasság */
+    background-color:white;
+	background-image: url("https://psychonautwiki.org/w/thumb.php?f=Psilocybin.svg&width=405");
+	background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+	border: 3px solid rgba(14,12,12,1.00);
+	box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+	
+	
+.molecule-name {
+	text-align: center;
+	top: 7vh; /* Tetszőleges távolság a felső széltől */
+	right: 2.5vw; /* Tetszőleges távolság a jobb széltől */
+    width: 250px; /* Tetszőleges szélesség */
+    height: 24px; /* Tetszőleges magasság */
+    background-color: black;
+	border: 3px solid rgba(14,12,12,1.00);
+	box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+	
+	
+.dosage-box {
+		top: 58vh; /* Tetszőleges távolság a felső széltől */
+        right: 2.5vw; /* Tetszőleges távolság a jobb széltől */
+        width: 250px; /* Tetszőleges szélesség */
+        height: 20vw; /* Tetszőleges magasság */
+        background-color:white;
+		background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+	}
+	
+.duration-box {
+		top: 100.5vh; /* Tetszőleges távolság a felső széltől */
+        right: 2.5vw; /* Tetszőleges távolság a jobb széltől */
+        width: 250px; /* Tetszőleges szélesség */
+        height: 20vw; /* Tetszőleges magasság */
+        background-color: white;
+		background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+	}
+	
+
+
+.summary-box {
+        top:7vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 94vh; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.8);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+		
+    }
+
+.history-box {
+        top:104vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 108vh; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.8);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+.chemistry-box {
+        top: 215vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 420px; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.8);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+
+.navigation-box {
+		position: absolute;
+	    border-radius: 10px;
+		top: 0.1rem;
+		left: 60vh;
+		width: 10wv;
+		padding: 5px;
+	}
+
+.navigation-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    font-style: oblique;
+    background-color: rgba; /* Ezt az értéket pontosítsd, ha szükséges */
+}
+
+.navigation-box ul li {
+	background-color: rgba(0,0,0,0.79);
+    display: inline-block; /* Megoldja, hogy az li elemek egymás mellett jelenjenek meg */
+    margin: 0 7px; /* Távolság egymás között */
+	border-radius: 30px;
+	padding: 3px;
+}
+
+.navigation-box ul li button {
+    color: white;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer; /* Ezzel jelzi a böngésző, hogy a gombok kattinthatók */
+    transition: font-size 0.5s ease; /* Átmenet a font-size tulajdonságon, 0.5 másodperc időtartamban, könnyű gyorsulással */
+
+}
+.navigation-box ul li button:hover {
+    font-size: 28px; /* A nagyítandó méret */
+}
+	
+table {
+	border-collapse: collapse;
+	text-align: center;
+	margin: 20px;
+	}
+	
+
+h3 {
+		color:rgba(12,83,73,1.00);
+	}
+	
+h4 {
+		
+		color:rgba(156,54,56,1.00)
+	}
+	
+</style>
+<body>
+
+	<div class="container">
+	<div class="background">
+		<div class="box button-box">
+        <button class="button" onclick="window.location.href='psychedelic wiki.html'">Go back</button>
+</div>
+<div class="navigation-box">
+    <ul>
+        <li><button data-target="#summary">Summary</button></li>
+        <li><button data-target="#history">History</button></li>
+        <li><button data-target="#chemistry">Chemistry</button></li>
+        <li><button data-target="#subjective-effects">Subjective Effects</button></li>
+    </ul>
+</div>
+
+<div class="name-box">
+	<h1> Psilocybin Mushrooms</h1>
+<div class="box summary-box" id="summary">
+	<h2> Summary</h2>
+<p> Psilocybin mushrooms (also known as magic mushrooms, psychedelic mushrooms, and shrooms) are a family of psychoactive fungi that contain psilocybin, a psychedelic substance of the tryptamine class. The mechanism of action is not fully known, although binding activity at serotonin receptors is thought to be involved. </p>
+
+<p>Psilocybin mushrooms occur on all continents and have been taxonomically classified into over 200 species, the most potent of which belong to the genus Psilocybe Based on imagery found in prehistoric rock art, they are thought to have been used by various human cultures since before recorded history.</p>
+	
+<p>After being introduced to the Western world in the 1950s, they generated substantial public interest.[3] Along with LSD, they were incorporated into the youth counterculture movement of the 1960s. Widespread usage of psychedelics provoked a societal backlash, and they were prohibited in 1970</p>
+
+<p>Subjective effects include visual geometry, hallucinatory states, time distortion, enhanced introspection, conceptual thinking, euphoria, and ego loss. The intensity and duration of effects can vary greatly depending on factors such as species and batch, which can complicate standardized dosing information (see this section). They are often described to evoke entheogenic, mystical-like, or transpersonal experiences that may facilitate self-reflection and personal growth.</p>
+	
+<p>In distinction to psychedelics like LSD, mescaline, and 2C-B, which may be described as "stimulating", "cerebral", and "bright", psilocybin mushrooms are typically described as having an "earthy", "subliminal", or "dream-like" quality. They also are reported to produce slightly more emotion enhancement, time distortion and ego loss than the aforementioned substances, as well as more nausea, confusion, and sedation.</p>
+		
+<p>Unlike most highly prohibited substances, psilocybin mushrooms have low abuse potential and are neither addictive nor physiologically toxic.[5] However, adverse psychological reactions such as severe anxiety, paranoia, delusions and psychosis are always possible, particularly among individuals predisposed to mental disorders.</p>
+
+<p>It is highly advised to use harm reduction practices if using this substance.</p>
+	
+	</div>
+		</div>
+    <div class="box history-box" id="history">
+	<h2>History</h2>
+		
+		<p>Today, they are among the most widely used psychedelic substances (partly due to the ease of personal cultivation and harvesting). As a part of the so-called "psychedelic renaissance", they are currently being investigated in the treatment of a number of ailments including anxiety, depression, addiction, and other mental disorders.</p>
+<p>A growing body of evidence suggests that psychoactive mushrooms have been used by humans in religious ceremonies for thousands of years. In Mesoamerica, they have been consumed in ritual ceremonies for 3000 years.</p>
+
+<p>For example, murals dated 9000 to 7000 BCE found in the Sahara desert in southeast Algeria depict horned beings dressed as dancers holding mushroom-like objects.6,000-year-old pictographs discovered near the Spanish town of Villar del Humo illustrate several mushrooms that have been tentatively identified as Psilocybe hispanica, a hallucinogenic species native to the area.</p>
+
+<p>Archaeological artifacts from Mexico have also been interpreted by some scholars as evidence for ritual and ceremonial usage of psychoactive mushrooms in the Mayan and Aztec cultures of Mesoamerica.[citation needed] In Nahuatl, the language of the Aztecs, the mushrooms were called teonanácatl, or "God's flesh".</p>
+
+<p>Following the arrival of Spanish explorers to the New World in the 16th century, chroniclers reported the use of mushrooms by the natives for ceremonial and religious purposes. Accounts describe mushrooms being eaten in festivities for the accession of emperors and the celebration of successful business trips by merchants.</p>
+
+<p>After the defeat of the Aztecs, the Spanish forbade traditional religious practices and rituals that they considered "pagan idolatry", including ceremonial mushroom use. For the next four centuries, the Indians of Mesoamerica hid their use of entheogens from the Spanish authorities.</p>
+
+<p>Heim cultivated the mushrooms in France, and sent samples for analysis to Albert Hofmann, a chemist employed by the Swiss pharmaceutical company Sandoz (now Novartis). Hofmann, who had in 1938 created LSD, led a research group that isolated and identified the psychoactive compounds from Psilocybe mexicana.
+
+He and his colleagues later synthesized a number of compounds chemically related to the naturally occurring psilocybin, to see how structural changes would affect psychoactivity. These included 4-HO-DET and 4-AcO-DMT. Sandoz marketed and sold pure psilocybin under the name "Indocybin" to clinicians worldwide without any reports of serious complications.[</p>
+
+<p>In the early 1960s, Harvard University became a testing ground for psilocybin via the efforts of Timothy Leary and his associates, Ralph Metzner and Richard Alpert, under a project known as the Harvard Psilocybin Project. Leary obtained synthesized psilocybin from Hofmann through Sandoz. Some studies, such as the Concord Prison Experiment, found promising results for psilocybin's utility in clinical psychiatry.</p>
+	
+</div>
+	</div>
+	<div class="box chemistry-box" id="chemistry">
+	<h2>Chemistry</h2>
+<p>LSD, or d-lysergic acid diethylamide, belongs to a class of synthetic organic compounds called lysergamides (a subclass of ergolines).</p>
+
+<p>It is the "parent compound" of the lysergamide family, meaning it serves as the prototype for a series of compounds that are derived from its structure and have broadly similar effects. These include: 1B-LSD, 1P-LSD, 1V-LSD, ALD-52, AL-LAD, ETH-LAD, PRO-LAD, LSM-775, LSZ, and MiPLA.</p>
+
+<p>The chemical structure consists of a bicyclic hexahydroindole ring fused to a bicyclic quinoline group (lysergic acid). At carbon 8 of the quinoline an N,N-diethyl carboxamide is bound. It is additionally substituted at carbon 6 with a methyl group.</p>
+
+<p>It is a chiral compound with two stereocenters at R5 and R8. The active form of LSD is called (+)-D-LSD, which has an absolute configuration of (5R, 8R). The other three stereoisomers do not have psychoactive properties.</p>
+
+<p>The pure form occurs as colorless, odorless, prismatic crystals. It is sensitive to oxygen, ultraviolet light, and chlorine (especially in solution). Its potency may last for years if it is stored away from light and moisture at cold temperatures around 0°C or below, but slowly degrades at normal room temperature (25°C).
+		</p>
+	</div>
+	
+	
+	<div class="box pharmacology-box"></div>
+	<div class="box molecule-box"></div>
+	<div class="box molecule-name">
+		<p1>Psilocin (4-HO-DMT)</p1></div>
+	<div class="box dosage-box">
+	<table>
+		
+      <!-- Table title -->
+      <caption>
+        <h3>Dosage</h3>
+		<h4>Warning: Always start with lower doses due to differences between individual body weight, tolerance, metabolism, and personal sensitivity.</h4>
+      </caption>
+      <!-- Columns heading  -->
+      <thead>
+        <tr>
+          <th>Low</th>
+          <th>Medium</th>
+          <th>High</th>
+		  <th>Heroic</th>
+        </tr>
+      </thead>
+      <!-- Text for each column row 1 -->
+      <tbody>
+        <tr>
+          <td>0,25-0,5g</td>
+          <td>1-3g</td>
+          <td>3-5g</td>
+		  <td>5-15g</td>
+        </tr>
+
+      </tbody>
+    </table>
+		
+</div>
+<div class="box duration-box">
+	<table>
+		<caption>
+        <h3>Duration</h3>
+</caption>
+  <tr>
+    <th>Total:</th>
+    <td>4 - 6 hours</td>
+  </tr>
+  <tr>
+    <th>Onset:</th>
+    <td>15 - 30 minutes</td>
+  </tr>
+		
+<tr>
+    <th>Come up:</th>
+    <td>30 - 90 minutes </td>
+  </tr>
+		
+		<tr>
+    <th>Peak:</th>
+    <td>1.5 - 3 hours</td>
+  </tr>
+		<tr>
+    <th>Offset:</th>
+    <td>3 - 5 hours</td>
+  </tr>
+		<tr>
+    <th>After effects:</th>
+    <td>2-3 hours</td>
+  </tr>
+
+</table>
+	
+	</div>
+</div>
+<script>
+
+document.querySelectorAll('.navigation-box ul li button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const startPosition = window.pageYOffset;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 50; // 50px offset for any fixed header
+            const startTime = performance.now();
+            
+            function scrollAnimation(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const duration = 1000;
+                const easeInOutQuad = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+                if (elapsedTime < duration) {
+                    const progress = easeInOutQuad(elapsedTime / duration);
+                    window.scrollTo(0, startPosition + (targetPosition - startPosition) * progress);
+                    requestAnimationFrame(scrollAnimation);
+                } else {
+                    window.scrollTo(0, targetPosition);
+                }
+            }
+
+            requestAnimationFrame(scrollAnimation);
+        }
+    });
+});
+	
+</script>
+</body>
+</html>

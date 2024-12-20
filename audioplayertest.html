@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+    html {
+    background-color: black;
+    
+    }
+        .music-player {
+            position: fixed;
+            bottom: 16px;
+            right: 20px;
+            z-index: 999999999;
+        }
+        .music-player button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+        .play-button::before {
+            content: '\f04b';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 24px;
+        }
+        .pause-button::before {
+            content: '\f04c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 24px;
+        }
+        .volume-button::before {
+            content: '\f028';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="audio-player" autoplay>
+        <source src="audio.mp3" type="audio/mp3">
+        Az ön böngészője nem támogatja az audió lejátszást.
+    </audio>
+    <div class="music-player">
+        <button class="play-button"></button>
+     
+        <button class="volume-button"></button>
+    </div>
+
+    <script>
+ document.addEventListener('DOMContentLoaded', function() {
+            const audioPlayer = document.getElementById('audio-player');
+            const playButton = document.querySelector('.play-button');
+            const volumeButton = document.querySelector('.volume-button');
+
+            function togglePlayPause() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    playButton.classList.remove('play-button');
+                    playButton.classList.add('pause-button');
+                } else {
+                    audioPlayer.pause();
+                    playButton.classList.remove('pause-button');
+                    playButton.classList.add('play-button');
+                }
+            }
+
+            playButton.addEventListener('click', togglePlayPause);
+
+            volumeButton.addEventListener('click', function() {
+                audioPlayer.muted = !audioPlayer.muted;
+                volumeButton.innerHTML = audioPlayer.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+            });
+
+            // Ensure the button shows the correct icon on page load
+            audioPlayer.addEventListener('play', function() {
+                playButton.classList.remove('play-button');
+                playButton.classList.add('pause-button');
+            });
+
+            audioPlayer.addEventListener('pause', function() {
+                playButton.classList.remove('pause-button');
+                playButton.classList.add('play-button');
+            });
+        });
+    </script>
+</body>
+</html>

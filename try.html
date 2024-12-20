@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSD</title>
+</head>
+<style>
+		
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	overflow: hidden;
+}
+	
+		
+header {
+	position: fixed;
+	top: 0%;
+    background-color: rgba(13,13,13,0.6);
+    padding: 10px;
+	width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Teljes szélesség */
+    height: 100vh; /* Teljes magasság */
+    background-size: cover; /* Az ablak teljes területét kitölti */
+    background-position: center; /* A kép középre pozícionálása */
+	background-image: url("lsdbackground.jpg"); 
+    background-color: rgba(0,0,0,0.73);
+}
+
+
+header h1 {
+    margin: 0;
+    color:rgba(19,207,35,1.00);
+}
+
+nav ul {
+	position:relative;
+    list-style-type: none;
+    padding: 0;
+	top: 500px;
+}
+
+nav ul li {
+	position:relative;
+    display: inline;
+    margin-right: 20px;
+	top: 500px;
+}
+
+footer {
+    background-color: rgba(13,13,13,0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+	}
+		
+	
+
+    </style>
+	
+
+<body>
+	
+<header>
+<h1>LSD - Lysergic Acid Diethylamid</h1>
+</header>
+	
+<div id="navigation">
+                <ul>
+				<li><a href="#">Summary</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Chemistry</a></li>
+                <li><a href="#">Pharmacology</a></li>
+				<li><a href="#">Dose</a></li>
+				<li><a href="#">Subjective Effects</a></li>
+				<li><a href="#">Physical Effects</a></li>
+				<li><a href="#">Cogintive Effects</a></li>
+				<li><a href="#">Visual Effects</a></li>
+				<li><a href="#">Transpersonal Effects</a></li>
+				<li><a href="#">Forms</a></li>
+				<li><a href="#">Research</a></li>
+				<li><a href="#">Toxicity and harm potential</a></li>
+				<li><a href="#">Legal status</a></li>
+				<li><a href="#">Pharmacology</a></li>
+    </ul>
+</div>
+
+    <footer>
+        <p>The authenticity of the informations may vary, it is for informational and harm reduction purposes only. </p>
+    </footer>
+	
+	<script>
+    document.querySelectorAll('#navigation a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibogaine</title>
+</head>
+<style>
+	
+
+	html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://images.newscientist.com/wp-content/uploads/2019/06/07122827/e94c1h-2.jpg"); 
+    background-size: cover; 
+		/*background-repeat: no-repeat;*/
+
+	::-webkit-scrollbar {
+    width: 15px; /* A csúszka szélessége */
+    } 
+		/* Görgetősáv hátterének színe */
+	::-webkit-scrollbar-track {
+    background: rgba(59,54,54,1.00);
+	}
+		/* Görgetősáv csúszkájának színe */
+	::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 255, 255, 0.5), rgba(0, 0, 255, 0.5), rgba(255, 0, 255, 0.5), rgba(255, 0, 0, 0.5)); 
+    }
+		/* Aktív (görgetett) görgetősáv csúszkájának színe */
+	::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+
+	}
+
+	h1 {
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-style: italic;
+	font-size: 30px;
+    margin-left: 8px;
+	animation: colorChange 5s infinite; /* Animáció alkalmazása: 5 másodperc hosszan, végtelen ismétléssel */
+
+	padding:6px;
+	border-radius: 20px;
+		
+	}
+	
+@keyframes colorChange {
+ 
+ 0% {
+ color: rgba(208,90,0,1.00);
+  }
+20% {
+	
+ color: rgba(195,14,17,1.00);
+  }
+40% {
+    color: rgba(255,174,0,1.00);
+  }
+60% {
+    color: rgba(16,213,204,1.00);
+  }
+80% {
+    color: rgba(15,215,6,1.00);
+  }
+100% {
+    color: rgba(206,33,223,1.00);
+  }
+}
+	
+.first-three {
+    font-size: 140%; /* Változtasd meg a méretet az igényeid szerint */
+}
+	
+h2{
+	color: rgba(255,245,0,1.00);
+	margin-left: 16px;
+	}
+	
+p {
+	color:rgba(240,240,240,1.00);
+	font-size: 19px;
+	font-style: normal;
+	font-weight: 500;
+	margin:20px;	 
+	}
+	
+.container {
+    position: relative;
+    width: 100vw; /* Tetszőleges szélesség */
+    height: 100vh; /* Tetszőleges magasság */  
+    }
+	
+.button-container {
+  text-align: center;
+  position: relative; /* A .button elemek relatív pozícionálódásához szükséges */
+}
+
+.button {
+  background-color: red;
+  left: 187vh;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative; /* Relatív pozícióra változtatva */
+}
+	
+	
+.box {
+   position: absolute;
+    }
+
+	
+.molecule-box {
+    top: 7.2vh; /* Tetszőleges távolság a felső széltől */
+    right: 2.5vw; /* Tetszőleges távolság a jobb széltől */
+    width: 250px; /* Tetszőleges szélesség */
+    height: 330px; /* Tetszőleges magasság */
+    background-color:rgba(227,223,223,0.70);
+	background-image: url("https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=197060&t=l");
+	background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+	border: 3px solid rgba(14,12,12,1.00);
+	box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+	
+
+	
+.dosage-box {
+		top: 55vh; /* Tetszőleges távolság a felső széltől */
+        right: 2.5vw; /* Tetszőleges távolság a jobb széltől */
+        width: 250px; /* Tetszőleges szélesség */
+        height: 20vw; /* Tetszőleges magasság */
+        background-color: white;
+		background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+	}
+	
+.duration-box {
+		top: 97.5vh; /* Tetszőleges távolság a felső széltől */
+        right: 2.5vw; /* Tetszőleges távolság a jobb széltől */
+        width: 250px; /* Tetszőleges szélesség */
+        height: 20vw; /* Tetszőleges magasság */
+        background-color: white;
+		background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+	}
+	
+
+
+.summary-box {
+        top:7vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 93vh; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.7);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+		
+    }
+
+.history-box {
+        top: 94vh; /* Tetszőleges távolság a felső széltől */
+
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 94vh; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.7);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+.chemistry-box {
+        top: 197vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 420px; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.7);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+
+.navigation-box {
+		position: absolute;
+		top: -0.5vh;
+		left: 60vh;
+		width: 10wv;
+		padding: 5px;
+	}
+
+.navigation-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    font-style: oblique;
+    background-color: rgba; /* Ezt az értéket pontosítsd, ha szükséges */
+}
+
+.navigation-box ul li {
+	background-color: rgba(0,0,0,0.79);
+    display: inline-block; /* Megoldja, hogy az li elemek egymás mellett jelenjenek meg */
+    margin: 0 7px; /* Távolság egymás között */
+	border-radius: 30px;
+	padding: 3px;
+}
+
+.navigation-box ul li button {
+    color: white;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer; /* Ezzel jelzi a böngésző, hogy a gombok kattinthatók */
+    transition: font-size 0.5s ease; /* Átmenet a font-size tulajdonságon, 0.5 másodperc időtartamban, könnyű gyorsulással */
+
+}
+.navigation-box ul li button:hover {
+    font-size: 28px; /* A nagyítandó méret */
+}
+.name-box {
+		top:-3vh;
+	    
+	}
+table {
+	border-collapse: collapse;
+	text-align: center;
+	margin: 20px;
+	}
+	
+
+h3 {
+		color:rgba(12,83,73,1.00);
+	}
+	
+h4 {
+		
+		color:rgba(156,54,56,1.00)
+	}
+	
+	
+@media screen and (max-width: 600px) {
+  .dropdown-content {
+    display: none;
+  }
+  .dropdown-content a {
+    display: block;
+  }
+}
+</style>
+<body>
+
+<div class="container">
+		<div class="box button-box">
+        <button class="button" onclick="window.location.href='psychedelic wiki.html'">Go back</button>
+</div>
+<div class="navigation-box">
+    <ul>
+        <li><button data-target="#summary">Summary</button></li>
+        <li><button data-target="#history">History</button></li>
+        <li><button data-target="#chemistry">Chemistry</button></li>
+        <li><button data-target="#subjective-effects">Subjective Effects</button></li>
+    </ul>
+</div>
+</div>
+	<div class="box name-box">
+	<h1>Ibogaine</h1>
+		</div>
+<div class="box summary-box" id="summary">
+	<h2> Summary</h2>
+<h2> Ibogaine can cause life-threatening heart complications.[1]</h2>
+<p>It is strongly discouraged to use this substance in high doses or for multiple days in a row. Additionally, a trip sitter with proper medical training and equipment must be present. Please see this section for more details.</p>
+		
+<p> 10-Methoxyibogamine (commonly known as ibogaine) is a naturally occurring psychedelic substance of the tryptamine class. Ibogaine is an indole alkaloid found in Tabernanthe iboga, while similar alkaloids occur in other plants of the Apocynaceae family, such as Voacanga africana and Tabernaemontana undulata.[2] </p>
+
+<p>n West Central Africa, low dosages of Tabernanthe iboga extracts have been used by indigenous people against fatigue, hunger and thirst. Higher dosages capable of inducing visionary states are used for initiation rituals during religious ceremonies.[1] Ibogaine's medical history in the West began in the early 1900s when it was indicated for use as a neuromuscular stimulant.[3] In the 1940s and 1950s, its suitability as potential cardiovascular drug was studied.[4] Later in the 1960s, the substance received much attention because of its potential applicability as an anti-addiction medication.</p>
+
+<p>The pharmacology of ibogaine is complex and poorly understood. While largely behaving as a serotonergic psychedelic, ibogaine interacts with numerous brain systems including transporters, opioid receptors, sigma receptors, glutamate receptors, and nicotinic receptors.[5] Ibogaine’s complex pharmacology entails a significant potential to generate adverse effects, particularly on the cardiovascular system. Its use has been associated with at least 12 deaths since 1990.[1]</p>
+
+<p>Subjective effects include visual geometry, hallucinatory states, time distortion, enhanced introspection, conceptual thinking, euphoria, and ego loss. The intensity and duration of effects can vary greatly depending on factors such as species and batch, which can complicate standardized dosing information (see this section). They are often described to evoke entheogenic, mystical-like, or transpersonal experiences that may facilitate self-reflection and personal growth.</p>
+	
+
+<p>It is highly advised to use harm reduction practices if using this substance.</p>
+	
+    <div class="box history-box" id="history">
+	<h2>History</h2>
+<h2>History and Culture</h2>
+<p>The Iboga tree is the central pillar of the Bwiti religion practiced in West-Central Africa, mainly Gabon, Cameroon, and the Republic of the Congo, which uses the alkaloid-containing roots of the plant for its psychoactive properties in a number of ceremonies. Ibogaine is also used by indigenous peoples in low doses to combat fatigue, hunger, and thirst.[5]</p>
+
+
+</div>
+	</div>
+	<div class="box chemistry-box" id="chemistry">
+	<h2>Chemistry</h2>
+<p>Ibogaine is believed to produce its psychedelic effects from its binding efficacy at the 5-HT2A receptor. However, the role of these interactions and how they result in the psychedelic experience continues to remain elusive.</p>
+
+<p>Ibogaine is rapidly metabolized in the human body into noribogaine. Noribogaine acts as a serotonin reuptake inhibitor. It also acts as a moderate κ-opioid receptor agonist[9] and weak µ-opioid receptor agonist[9] or weak partial agonist.[10] It is possible that the action of ibogaine at the kappa opioid receptor may contribute significantly to the psychoactive effects. Salvia divinorum is another plant recognized for its strong hallucinogenic properties; it contains the chemical salvinorin A which is also a highly selective kappa opioid agonist.</p>
+
+<p>Both ibogaine and noribogaine have a plasma half-life of around two hours in rats,[11] although the half-life of noribogaine is slightly longer than that of the parent compound. It is proposed that ibogaine is deposited in fat and metabolized into noribogaine as it is released. [12] After ibogaine ingestion in humans, noribogaine shows higher plasma levels than ibogaine and is detected for a longer period than ibogaine.[13] Noribogaine is also more potent than ibogaine in rat drug discrimination assays when tested for the subjective effects of ibogaine.</p>
+	</div>
+	
+	
+	<div class="box pharmacology-box"></div>
+	<div class="box molecule-box"></div>
+	<div class="box dosage-box">
+	<table>
+		
+      <!-- Table title -->
+      <caption>
+        <h3>Dosage</h3>
+		<h4>Warning: Always start with lower doses due to differences between individual body weight, tolerance, metabolism, and personal sensitivity.</h4>
+      </caption>
+      <!-- Columns heading  -->
+      <thead>
+        <tr>
+          <th>Low</th>
+          <th>Medium</th>
+          <th>High</th>
+        </tr>
+      </thead>
+      <!-- Text for each column row 1 -->
+      <tbody>
+        <tr>
+          <td>15 - 75 ug</td>
+          <td>75 - 150 ug</td>
+          <td>150 - 300 ug</td>
+        </tr>
+
+      </tbody>
+    </table>
+		
+</div>
+<div class="box duration-box">
+	<table>
+		<caption>
+        <h3>Duration</h3>
+</caption>
+  <tr>
+    <th>Total:</th>
+    <td>8 - 12 hours</td>
+  </tr>
+  <tr>
+    <th>Onset:</th>
+    <td>15 - 30 minutes</td>
+  </tr>
+		
+<tr>
+    <th>Come up:</th>
+    <td>45 - 90 minutes </td>
+  </tr>
+		
+		<tr>
+    <th>Peak:</th>
+    <td>3 - 5 hours</td>
+  </tr>
+		<tr>
+    <th>Offset:</th>
+    <td>3 - 5 hours</td>
+  </tr>
+		<tr>
+    <th>After effects:</th>
+    <td>12 - 48 hours</td>
+  </tr>
+
+</table>
+	
+	</div>
+
+<script>
+
+document.querySelectorAll('.navigation-box ul li button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const startPosition = window.pageYOffset;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 50; // 50px offset for any fixed header
+            const startTime = performance.now();
+            
+            function scrollAnimation(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const duration = 1000;
+                const easeInOutQuad = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+                if (elapsedTime < duration) {
+                    const progress = easeInOutQuad(elapsedTime / duration);
+                    window.scrollTo(0, startPosition + (targetPosition - startPosition) * progress);
+                    requestAnimationFrame(scrollAnimation);
+                } else {
+                    window.scrollTo(0, targetPosition);
+                }
+            }
+
+            requestAnimationFrame(scrollAnimation);
+        }
+    });
+});
+</script>
+</body>
+</html>

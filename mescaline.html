@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mescaline Cactus</title>
+</head>
+<style>
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://www.qps.com/wp-content/uploads/2022/11/peyote-cactus-close-up-scaled-1.jpg"); 
+    background-size: cover; 
+		/*background-repeat: no-repeat;*/
+
+	::-webkit-scrollbar {
+    width: 15px; /* A csúszka szélessége */
+    } 
+		/* Görgetősáv hátterének színe */
+	::-webkit-scrollbar-track {
+    background: rgba(59,54,54,1.00);
+	}
+		/* Görgetősáv csúszkájának színe */
+	::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 255, 255, 0.5), rgba(0, 0, 255, 0.5), rgba(255, 0, 255, 0.5), rgba(255, 0, 0, 0.5)); 
+    }
+		/* Aktív (görgetett) görgetősáv csúszkájának színe */
+	::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+
+	}
+
+.name-box {
+	top:-3vh;
+	width: 330px;
+	height: 50px;
+	
+	}
+
+.name-box h1 {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	font-style: italic;
+	font-size: 30px;
+    margin-left: 8px;
+	animation: colorChange 5s infinite; /* Animáció alkalmazása: 5 másodperc hosszan, végtelen ismétléssel */
+	padding:3px;
+	border-radius: 5px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-shadow: 2px 2px 4px #000000, -2px -3px 5px #FFFFFF;
+	}
+	
+	@keyframes colorChange {
+ 
+ 0% {
+ color: rgba(208,90,0,1.00);
+  }
+20% {
+	
+ color: rgba(195,14,17,1.00);
+  }
+40% {
+    color: rgba(255,174,0,1.00);
+  }
+60% {
+    color: rgba(16,213,204,1.00);
+  }
+80% {
+    color: rgba(15,215,6,1.00);
+  }
+100% {
+    color: rgba(206,33,223,1.00);
+  }
+}
+	
+.first-three {
+    font-size: 140%; /* Változtasd meg a méretet az igényeid szerint */
+}
+	
+h2{
+	color: rgba(255,245,0,1.00);
+	margin-left: 16px;
+	}
+	
+p {
+	color:rgba(240,240,240,1.00);
+	font-size: 19px;
+	font-style: normal;
+	font-weight: 500;
+	margin:20px;	 
+	}
+	
+.container {
+    position: relative;
+    width: 100vw; /* Tetszőleges szélesség */
+    height: 100vh; /* Tetszőleges magasság */  
+    }
+	
+.button-container {
+  text-align: center;
+  position: relative; /* A .button elemek relatív pozícionálódásához szükséges */
+}
+
+.button {
+  background-color: rgba(177,126,14,1.00);
+  left: 188.5vh;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative; /* Relatív pozícióra változtatva */
+}
+	
+	
+.box {
+   position: absolute;
+    }
+
+	
+.molecule-box {
+    top: 7.2vh; /* Tetszőleges távolság a felső széltől */
+    right: 1.5vw; /* Tetszőleges távolság a jobb széltől */
+    width: 250px; /* Tetszőleges szélesség */
+    height: 150px; /* Tetszőleges magasság */
+    background-color:rgba(227,223,223,0.70);
+	background-image: url("https://psychonautwiki.org/w/thumb.php?f=Mescaline.svg&width=740");
+	background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+	border: 3px solid rgba(14,12,12,1.00);
+	box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+	
+
+	
+.dosage-box {
+		top: 29.5vh; /* Tetszőleges távolság a felső széltől */
+        right: 1.5vw; /* Tetszőleges távolság a jobb széltől */
+        width: 250px; /* Tetszőleges szélesség */
+        height: 20vw; /* Tetszőleges magasság */
+        background-color:rgba(227,223,223,0.70);
+		background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+	}
+	
+.duration-box {
+		top: 71.8vh; /* Tetszőleges távolság a felső széltől */
+        right: 1.5vw; /* Tetszőleges távolság a jobb széltől */
+        width: 250px; /* Tetszőleges szélesség */
+        height: 20vw; /* Tetszőleges magasság */
+        background-color:rgba(227,223,223,0.70);
+		background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+	}
+	
+
+
+.summary-box {
+        top:7vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 78vh; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.7);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+		
+    }
+
+.history-box {
+        top:87vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 80vh; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.7);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+.chemistry-box {
+        top: 169vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 420px; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.7);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+
+.navigation-box {
+		position: absolute;
+		top: 0.5vh;
+		left: 60vh;
+		width: 10wv;
+		padding: 5px;
+	}
+
+.navigation-box ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 19px;
+		font-weight: 700;
+		font-style: oblique;
+		background-color: rgba
+	}
+
+.navigation-box ul li {
+		margin: 0 10px; /* Távolság egymás között */
+		display: inline;
+		
+	}
+
+.navigation-box ul li a {
+		color: white;
+	    text-shadow: 2px 4px 4px #000000, -2px -4px 4px #FFFFFF;
+		text-decoration: none;
+		cursor: pointer; /* Ezzel jelzi a böngésző, hogy a linkek kattinthatók */
+		transition: font-size 0.5s ease; /* Átmenet a font-size tulajdonságon, 0.3 másodperc időtartamban, könnyű gyorsulással */
+	    text-shadow: 30px;
+	  
+	}
+.navigation-box ul li a:hover {
+		font-size: 28px; /* A nagyítandó méret */ 
+	}
+	
+table {
+	border-collapse: collapse;
+	text-align: center;
+	margin: 20px;
+	}
+	
+
+h3 {
+		color:rgba(12,83,73,1.00);
+	}
+	
+h4 {
+		
+		color:rgba(156,54,56,1.00)
+	}
+	
+	
+@media screen and (max-width: 600px) {
+  .dropdown-content {
+    display: none;
+  }
+  .dropdown-content a {
+    display: block;
+  }
+
+</style>
+<body>
+
+<div class="container">
+		<div class="box button-box">
+        <button class="button" onclick="window.location.href='psychedelic wiki.html'">Go back</button>
+</div>
+		<div class="navigation-box">
+		<ul>
+			<li><a href="#summary">Summary</a></li>
+			<li><a href="#history">History</a></li>
+			<li><a href="#chemistry">Chemistry</a></li>
+			<li><a href="#chemistry">Subjective Effects</a></li>
+			
+			
+		</ul>
+	</div>
+	</div>
+<div class="name-box">
+	<h1>Mescaline cactus</h1>
+<div class="box summary-box" id="summary">
+	<h2> Summary</h2>
+	<h1> Peyote and San Pedro cactus[1]</h1>
+<p>3,4,5-Trimethoxyphenethylamine (also known as mescaline) is a naturally-occurring classical psychedelic substance of the phenethylamine class.[1] It occurs naturally in the peyote cactus (Lophophora williamsii),[2] San Pedro cactus (Echinopsis pachanoi),[3] Peruvian Torch cactus (Echinopsis peruviana) as well as the Cactaceae plant and the Fabaceae bean families.[4] It is one of the oldest known hallucinogens and the parent compound of the psychedelic phenethylamines, one of the two major subclasses of psychedelic compounds (along with tryptamines).</p>
+		
+<p> Mescaline was first isolated from peyote in 1897 by the German chemist Arthur Heffter.[5] The ritual use of the peyote cactus has occurred for at least 5700 years by Native Americans in Mexico and other mescaline-containing cacti such as the San Pedro have a long history of use in the South American continent, from Peru to Ecuador.[6] Mescaline is an important part of the life's work of the American chemist Alexander Shulgin, who used it as a starting point for synthesizing dozens of novel psychedelic compounds that are documented in his 1991 book PiHKAL ("Phenethylamines I Have Known and Loved").[7] </p>
+
+<p>Subjective effects include open and closed-eye visuals, time distortion, enhanced introspection, conceptual thinking, euphoria, and ego loss. Mescaline is generally considered to be one of the most gentle, insightful, and euphoric psychedelics. It is known for placing greater emphasis on bodily and tactile sensations (sometimes compared to MDMA) than psychedelic tryptamines like psilocybin or DMT, which tend to have a more frenetic headspace and dynamic visual geometry. It is considered to be one of the best agents for psychedelic therapy due to its mellow, organic, yet complex character. Synthetic mescaline is highly sought after by connoisseurs and is typically produced in limited batches, owing to its low potency and relatively high production cost.</p>
+
+<p>Unlike other highly prohibited substances, mescaline has not been proven to be physiologically toxic or addictive.[8] Nevertheless, adverse psychological reactions such as anxiety, paranoia, delusions, and psychosis can still always occur, particularly among those predisposed to mental disorders.[9] Additionally, it should be noted that in street markets terms like "mescaline" or "synthetic mescaline" are commonly used as deceptive labels for other psychedelics (e.g. 2C-x, DOx, or 25x-NBOMe) that are typically more dangerous.[citation needed] It is highly advised to use harm reduction practices if using this substance.</p>
+
+<p>It is highly advised to use harm reduction practices if using this substance.</p>
+		
+<h1>History and Culture</h1>
+<p>The ritual use of the Peyote cactus has occurred for at least 5700 years by Native Americans in Mexico. Upon early contact, Europeans noted the use of Peyote in Native American religious ceremonies. Additionally, alternative mescaline-containing cacti such as the San Pedro have a long history of use in the South American continent, spanning from Peru to Ecuador.[6] The principal psychoactive component in both Peyote and San Pedro, mescaline, was first isolated and identified in 1897 by the German chemist Arthur Heffter[5] and first synthesized in 1919 by Ernst Späth.[10] It was one of the first psychedelics to be experimented with by Western intellectuals like Aldous Huxley, who famously described its effects in the 1954 essay "The Doors of Perception".[citation needed]</p>
+
+<p>In traditional peyote preparations, the top of the cactus is cut at ground level, leaving the large tap roots to grow new 'heads'. These 'heads' are then dried to make disc-shaped buttons and the buttons are chewed to produce the effects or soaked in water to drink. In modern times, users will often grind it into a powder and pour it into gel capsules to avoid having to come into contact with the bitter taste of the cactus. The usual human dose is 200–400 milligrams of mescaline sulfate or 178–356 milligrams of mescaline hydrochloride.[7] The average 76 mm (3.0 in.) button contains about 25 mg mescaline.</p>
+	
+<p>Mescaline is an important part of the life's work of Alexander Shulgin, a psychedelic chemist and researcher. Shulgin used mescaline as a starting point for synthesizing dozens of novel psychedelic phenethylamine compounds such as the 2C-x and DOx families. It is a member of the so-called "magical half-dozen" which refers to Shulgin's self-rated most important phenethylamine compounds with psychedelic activity, all of which except mescaline he developed and synthesized himself. They are found within the first book of PiHKAL, and are as follows: Mescaline, DOM, 2C-B, 2C-E, 2C-T-2 and 2C-T-7.</p>
+		
+<h1>Chemistry</h1>
+<p>Mescaline, or 3,4,5-trimethoxyphenethylamine, is a substituted phenethylamine featuring a phenyl ring bound to an amino -NH2 group through an ethyl chain. Mescaline contains three methoxy functional groups CH3O- which are attached to carbons R3, R4, and R5 of the phenyl ring.</p>
+
+<p>Mescaline has a number of structural analogs, which include but are not limited to: proscaline, escaline, and methallylescaline. It is also the synthetic starting point of the 2C-x and DOx family of psychedelic phenethylamines. 2C-x compounds like 2C-B (also known as bromomescaline) produce mescaline-like psychedelic effects but with greater potency and a reduced duration. DOx compounds (e.g. DOM, DOB) have a significantly extended duration and more stimulant effects.</p>
+	
+	</div>
+	<div class="box pharmacology-box"></div>
+	<div class="box molecule-box"></div>
+	<div class="box dosage-box">
+	<table>
+		
+      <!-- Table title -->
+      <caption>
+        <h3>Dosage</h3>
+		<h4>Warning: Always start with lower doses due to differences between individual body weight, tolerance, metabolism, and personal sensitivity.</h4>
+      </caption>
+      <!-- Columns heading  -->
+      <thead>
+        <tr>
+          <th>Low</th>
+          <th>Medium</th>
+          <th>High</th>
+        </tr>
+      </thead>
+      <!-- Text for each column row 1 -->
+      <tbody>
+        <tr>
+          <td>15 - 75 ug</td>
+          <td>75 - 150 ug</td>
+          <td>150 - 300 ug</td>
+        </tr>
+
+      </tbody>
+    </table>
+		
+</div>
+<div class="box duration-box">
+	<table>
+		<caption>
+        <h3>Duration</h3>
+</caption>
+  <tr>
+    <th>Total:</th>
+    <td>8 - 12 hours</td>
+  </tr>
+  <tr>
+    <th>Onset:</th>
+    <td>15 - 30 minutes</td>
+  </tr>
+		
+<tr>
+    <th>Come up:</th>
+    <td>45 - 90 minutes </td>
+  </tr>
+		
+		<tr>
+    <th>Peak:</th>
+    <td>3 - 5 hours</td>
+  </tr>
+		<tr>
+    <th>Offset:</th>
+    <td>3 - 5 hours</td>
+  </tr>
+		<tr>
+    <th>After effects:</th>
+    <td>12 - 48 hours</td>
+  </tr>
+
+</table>
+	
+	</div>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+	
+	document.querySelectorAll('.navigation-box ul li button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const startPosition = window.pageYOffset;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 50; // 50px offset for any fixed header
+            const startTime = performance.now();
+            
+            function scrollAnimation(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const duration = 1000;
+                const easeInOutQuad = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+                if (elapsedTime < duration) {
+                    const progress = easeInOutQuad(elapsedTime / duration);
+                    window.scrollTo(0, startPosition + (targetPosition - startPosition) * progress);
+                    requestAnimationFrame(scrollAnimation);
+                } else {
+                    window.scrollTo(0, targetPosition);
+                }
+            }
+
+            requestAnimationFrame(scrollAnimation);
+        }
+    });
+});
+</script>
+</body>
+</html>

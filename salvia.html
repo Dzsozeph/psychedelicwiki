@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salvia Divinorum</title>
+</head>
+<style>
+	
+
+	html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://psychedelictimes.com/wp-content/uploads/2021/09/sage.jpg); 
+
+    background-size: cover; 
+		/*background-repeat: no-repeat;*/
+
+	::-webkit-scrollbar {
+    width: 15px; /* A csúszka szélessége */
+    } 
+		/* Görgetősáv hátterének színe */
+	::-webkit-scrollbar-track {
+    background: rgba(59,54,54,1.00);
+	}
+		/* Görgetősáv csúszkájának színe */
+	::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 0, 0.5), rgba(0, 255, 255, 0.5), rgba(0, 0, 255, 0.5), rgba(255, 0, 255, 0.5), rgba(255, 0, 0, 0.5)); 
+    }
+		/* Aktív (görgetett) görgetősáv csúszkájának színe */
+	::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+	}
+
+
+.first-three {
+    font-size: 140%; /* Változtasd meg a méretet az igényeid szerint */
+}
+	
+h2{
+	color: rgba(255,245,0,1.00);
+	margin-left: 16px;
+	}
+	
+p {
+	color:rgba(240,240,240,1.00);
+	font-size: 19px;
+	font-style: normal;
+	font-weight: 500;
+	margin:20px;	 
+	}
+	
+.container {
+    position: relative;
+    width: 100vw; /* Tetszőleges szélesség */
+    height: 100vh; /* Tetszőleges magasság */  
+    }
+	
+.button-container {
+  text-align: center;
+  position: relative; /* A .button elemek relatív pozícionálódásához szükséges */
+}
+
+.button {
+  background-color: red;
+  left: 188.5vh;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative; /* Relatív pozícióra változtatva */
+}
+	
+	
+.box {
+   position: absolute;
+    }
+
+	
+.molecule-box {
+    top: 7.2vh; /* Tetszőleges távolság a felső széltől */
+    right: 2.5vw; /* Tetszőleges távolság a jobb széltől */
+    width: 250px; /* Tetszőleges szélesség */
+    height: 330px; /* Tetszőleges magasság */
+    background-color:rgba(227,223,223,0.70);
+	background-image: url("https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=128563&t=l");
+	background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+	border: 3px solid rgba(14,12,12,1.00);
+	box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+	
+
+	
+.dosage-box {
+		top: 55vh; /* Tetszőleges távolság a felső széltől */
+        right: 2.5vw; /* Tetszőleges távolság a jobb széltől */
+        width: 250px; /* Tetszőleges szélesség */
+        height: 20vw; /* Tetszőleges magasság */
+        background-color:rgba(227,223,223,0.70);
+		background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+	}
+	
+.duration-box {
+		top: 97.5vh; /* Tetszőleges távolság a felső széltől */
+        right: 2.5vw; /* Tetszőleges távolság a jobb széltől */
+        width: 250px; /* Tetszőleges szélesség */
+        height: 20vw; /* Tetszőleges magasság */
+        background-color:rgba(227,223,223,0.70);
+		background-size: 100% 100%; /* A háttérkép mérete pontosan a .molecule-box méretének megfelelően */
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+	}
+	
+
+
+.summary-box {
+        top:7vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 78vh; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.7);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+		
+    }
+
+.history-box {
+        top:87vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 80vh; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.7);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+.chemistry-box {
+        top: 169vh; /* Tetszőleges távolság a felső széltől */
+        left: 0.5vw; /* Tetszőleges távolság a bal széltől */
+        width: 78vw; /* Tetszőleges szélesség */
+        height: 420px; /* Tetszőleges magasság */
+        background-color: rgba(0,0,0,0.7);
+		border: 3px solid rgba(14,12,12,1.00);
+		box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.5); /* X-offset, Y-offset, Blur radius, Szín és átlátszatlanság */
+    }
+
+.navigation-box {
+		position: absolute;
+		top: 0.5vh;
+		left: 60vh;
+		width: 10wv;
+		padding: 5px;
+	}
+
+.navigation-box ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 19px;
+		font-weight: 700;
+		font-style: oblique;
+		background-color: rgba
+	}
+
+.navigation-box ul li {
+		margin: 0 10px; /* Távolság egymás között */
+		display: inline;
+		
+	}
+
+.navigation-box ul li a {
+		color: white;
+	    text-shadow: 2px 4px 4px #000000, -2px -4px 4px #FFFFFF;
+		text-decoration: none;
+		cursor: pointer; /* Ezzel jelzi a böngésző, hogy a linkek kattinthatók */
+		transition: font-size 0.5s ease; /* Átmenet a font-size tulajdonságon, 0.3 másodperc időtartamban, könnyű gyorsulással */
+	    text-shadow: 30px;
+	  
+	}
+.navigation-box ul li a:hover {
+		font-size: 28px; /* A nagyítandó méret */ 
+	}
+	
+.name-box {
+	top:-3vh;
+	lef:40vh;
+    background-color: rgba(0,0,0,0.7);
+	width: 230px;
+	height: 50px;
+	border-radius: 6px;
+	
+	}
+
+.name-box h1 {
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-style: italic;
+	font-size: 26px;
+    margin-left: -20px;
+	animation: colorChange 5s infinite; /* Animáció alkalmazása: 5 másodperc hosszan, végtelen ismétléssel */
+	padding:5px;
+	
+	text-align: center;
+	white-space: nowrap;
+    margin-top: 20px;
+	}
+	
+	@keyframes colorChange {
+ 
+ 0% {
+ color: rgba(208,90,0,1.00);
+  }
+20% {
+	
+ color: rgba(195,14,17,1.00);
+  }
+40% {
+    color: rgba(255,174,0,1.00);
+  }
+60% {
+    color: rgba(16,213,204,1.00);
+  }
+80% {
+    color: rgba(15,215,6,1.00);
+  }
+100% {
+    color: rgba(206,33,223,1.00);
+  }
+}
+	
+table {
+	border-collapse: collapse;
+	text-align: center;
+	margin: 20px;
+	}
+	
+
+h3 {
+		color:rgba(12,83,73,1.00);
+	}
+	
+h4 {
+		
+		color:rgba(156,54,56,1.00)
+	}
+	
+	
+@media screen and (max-width: 600px) {
+  .dropdown-content {
+    display: none;
+  }
+  .dropdown-content a {
+    display: block;
+  }
+}
+</style>
+<body>
+
+<div class="container">
+		<div class="box button-box">
+        <button class="button" onclick="window.location.href='psychedelic wiki.html'">Go back</button>
+</div>
+		<div class="navigation-box">
+		<ul>
+			<li><a href="#summary">Summary</a></li>
+			<li><a href="#history">History</a></li>
+			<li><a href="#chemistry">Chemistry</a></li>
+			<li><a href="#chemistry">Subjective Effects</a></li>
+			
+			
+		</ul>
+	</div>
+
+<div class="name-box">
+	<h1>Salvia Divinorum</h1>
+<div class="box summary-box" id="summary">
+	<h2> Summary</h2>
+<p>Salvia divinorum (also called Diviner's Sage, Ska María Pastora, Seer's Sage, and Salvia) is a psychoactive plant in the Salvia genus. Its native habitat is within Cloud Forest in the isolated Sierra Mazateca of Oaxaca, Mexico where it grows in shady and moist locations. The plant grows to over a meter high and has hollow square stems, large leaves, and occasional white flowers with violet calyxes. The main psychoactive compound in the plant is Salvinorin A, which can also be found in lower quantities in Salvia recognita and Salvia glutinosa.</p>
+	
+<h2> A 2019 large-scale study found that ketamine, Salvia divinorum, and DMT (and other classical psychedelic substances) are linked to near-death experiences.[1] </h2>
+
+<p>Salvinorin A is the main active psychoactive molecule within Salvia Divinorum, a Mexican plant which has a long history of use as an entheogen by indigenous Mazatec shamans. It is structurally distinct from other naturally occurring hallucinogens (such as DMT, psilocin and mescaline) because it contains no nitrogen atoms, making it a terpenoid and not an alkaloid as is the norm. This means it cannot be rendered as a salt.</p>
+
+<p>It also differs in subjective experience compared to other hallucinogens, and has been described as an atypical psychedelic although this formal classification is debatable.</p>
+
+
+</div>
+	
+	
+    <div class="box history-box" id="history">
+	<h2>History</h2>
+<p>Salvinorin A is a neoclerodane molecule, an oxygenated cyclic diterpenoid. It contains four isoprene groups bound to its oxygenated polycyclic rings. Salvinorin A is unique as it is not an alkaloid; it contains no nitrogen atoms unlike almost all known classical, natural, or synthetic hallucinogens.</p>
+
+<p>Salvinorin A is a potent κ-opioid receptor agonist. It does not have any effect on the 5-HT2A receptor, the receptor targeted by most psychedelic substances, nor does it act as an NMDA receptor antagonist as dissociatives do. The unique structure of salvinorin A lacks features commonly associated with opioid ligand binding such as a guaternary carbon atom linked to a tertiary amine group by two other carbon atoms. Unlike traditional opioid agonists, salvinorin A targets the κ-opioid receptor rather than the μ-opioid receptor.</p>
+
+<p>Salvinorin A also acts as a potent agonist at D2 receptors,[1] which may be partially responsible for its hallucinogenic effects.</p>
+		
+
+</div>
+	</div>
+	<div class="box chemistry-box" id="chemistry">
+	<h2>Chemistry</h2>
+<p>LSD, or d-lysergic acid diethylamide, belongs to a class of synthetic organic compounds called lysergamides (a subclass of ergolines).</p>
+
+<p>It is the "parent compound" of the lysergamide family, meaning it serves as the prototype for a series of compounds that are derived from its structure and have broadly similar effects. These include: 1B-LSD, 1P-LSD, 1V-LSD, ALD-52, AL-LAD, ETH-LAD, PRO-LAD, LSM-775, LSZ, and MiPLA.</p>
+
+<p>The chemical structure consists of a bicyclic hexahydroindole ring fused to a bicyclic quinoline group (lysergic acid). At carbon 8 of the quinoline an N,N-diethyl carboxamide is bound. It is additionally substituted at carbon 6 with a methyl group.</p>
+
+<p>It is a chiral compound with two stereocenters at R5 and R8. The active form of LSD is called (+)-D-LSD, which has an absolute configuration of (5R, 8R). The other three stereoisomers do not have psychoactive properties.</p>
+
+<p>The pure form occurs as colorless, odorless, prismatic crystals. It is sensitive to oxygen, ultraviolet light, and chlorine (especially in solution). Its potency may last for years if it is stored away from light and moisture at cold temperatures around 0°C or below, but slowly degrades at normal room temperature (25°C).
+		</p>
+	</div>
+	
+	
+	<div class="box pharmacology-box"></div>
+	<div class="box molecule-box"></div>
+	<div class="box dosage-box">
+	<table>
+		
+      <!-- Table title -->
+      <caption>
+        <h3>Dosage</h3>
+		<h4>Warning: Always start with lower doses due to differences between individual body weight, tolerance, metabolism, and personal sensitivity.</h4>
+      </caption>
+      <!-- Columns heading  -->
+      <thead>
+        <tr>
+          <th>Low</th>
+          <th>Medium</th>
+          <th>High</th>
+        </tr>
+      </thead>
+      <!-- Text for each column row 1 -->
+      <tbody>
+        <tr>
+          <td>15 - 75 ug</td>
+          <td>75 - 150 ug</td>
+          <td>150 - 300 ug</td>
+        </tr>
+
+      </tbody>
+    </table>
+		
+</div>
+<div class="box duration-box">
+	<table>
+		<caption>
+        <h3>Duration</h3>
+</caption>
+  <tr>
+    <th>Total:</th>
+    <td>8 - 12 hours</td>
+  </tr>
+  <tr>
+    <th>Onset:</th>
+    <td>15 - 30 minutes</td>
+  </tr>
+		
+<tr>
+    <th>Come up:</th>
+    <td>45 - 90 minutes </td>
+  </tr>
+		
+		<tr>
+    <th>Peak:</th>
+    <td>3 - 5 hours</td>
+  </tr>
+		<tr>
+    <th>Offset:</th>
+    <td>3 - 5 hours</td>
+  </tr>
+		<tr>
+    <th>After effects:</th>
+    <td>12 - 48 hours</td>
+  </tr>
+
+</table>
+	
+	</div>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+	
+	document.querySelectorAll('.navigation-box ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const startPosition = window.pageYOffset; // Aktuális görgetési pozíció
+            const targetPosition = targetElement.getBoundingClientRect().top; // Cél elem pozíciója az ablakban
+            const startTime = performance.now(); // Az animáció kezdési időpontja
+            
+            function scrollAnimation(currentTime) {
+                const elapsedTime = currentTime - startTime; // Eltelt idő az animáció kezdete óta
+                const duration = 1000; // Animáció időtartama (milliszekundumban)
+                const easeInOutQuad = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // Egyenletesen gyorsuló és lassuló mozgást megvalósító függvény
+
+                if (elapsedTime < duration) {
+                    const progress = easeInOutQuad(elapsedTime / duration); // Animációs előrehaladás számítása az idő függvényében
+                    window.scrollTo(0, startPosition + targetPosition * progress); // A böngésző görgetése az animációs előrehaladás alapján
+                    requestAnimationFrame(scrollAnimation); // A következő animációs keret kérése
+                } else {
+                    window.scrollTo(0, startPosition + targetPosition); // A cél elemre való görgetés befejezése
+                }
+            }
+
+            requestAnimationFrame(scrollAnimation); // Az animáció kezdeti kérése
+        }
+    });
+});
+</script>
+	
+	
+	
+</body>
+</html>

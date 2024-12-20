@@ -84,7 +84,7 @@ body {
 	transform: translate(-50%, -50%);
 	align-content: center;
 	align-items: center;
-	background-image: url("logo3.PNG");
+	background-image: url("logo3.png");
 	background-size: cover;
 	z-index: 1;
 }

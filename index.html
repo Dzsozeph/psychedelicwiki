@@ -17,6 +17,7 @@
 
 <div id="startPage">
   <div id="startPageContent">
+	 
 	  <div class="start-logo"></div>
 	  <div class="start-background"></div>
 		  
@@ -24,6 +25,9 @@
     <p class="startpage-text">It is important to mention that this platform was created only for the purpose of harm reduction and information. I do not endorse or promote any illegal drug use or illegal activity. My goal is to provide objective and reliable information about drug-related risks and how to reduce them, and promote to understand more deeply the hidden parts of healing by the spiritual and mystical types of experiences.</p>
     <button id="understoodButton">I understood and I am over 21+</button>
   </div>
+	 <div id="preloader">
+  <div class="spinner"></div>
+</div>
   </div>
 	
 <!---<audio id="audio-player" autoplay>
@@ -286,7 +290,14 @@
 	
 	<div class="adaptive"></div>
     <div class="responsive"></div>
-
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+  window.setTimeout(function () {
+    document.getElementById("preloader").classList.add("hidden");
+  }, 1500);
+});
+	
+	</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="scripts.js"></script>
 </body>

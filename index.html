@@ -284,35 +284,36 @@
  </div>
 <!--	<button id="openPlayerBtn" class="afacad-flux-font" style="color:white; font-style=italic">Music Player</button>-->
 
-<div id="musicPlayerWindow" class="hidden">
-    <div class="player">
-        <h2 id="trackTitle">Zene Címe</h2>
-        <audio id="audioPlayer" src="your-song.mp3"></audio>
-        <div class="controls">
-            <button id="prevBtn">⏮</button>
-            <button id="playPauseBtn">⏯</button>
-            <button id="nextBtn">⏭</button>
-            <button id="stopBtn">⏹</button>
-        </div>
-    </div>
-    <button id="closePlayerBtn">Bezárás</button>
-</div>
 	<div class="footer">
 		<p>Copyright(R) 2024 Psychedelic Wiki J.</p>
 		</div>
+	<div class="zene">
+	 <div class="player">
+    <div class="controls">
+      <button id="playPauseBtn">⋉</button>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+      <input type="range" id="progressBar" value="0" step="0.01">
+    </div>
+    <audio id="audioPlayer" src="audio.mp3"></audio>
+  </div>
 	
+	
+	
+	
+	</div>
 	<div class="adaptive"></div>
     <div class="responsive"></div>
+	
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
   window.setTimeout(function () {
     document.getElementById("preloader").classList.add("hidden");
   }, 1500);
 });
-	
+
+
 	</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="scripts.js"></script>
 </body>
 </html>
->>

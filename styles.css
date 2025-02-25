@@ -953,69 +953,60 @@ background: radial-gradient(circle, rgba(15,101,36,1) 26%, rgba(39,120,59,1) 49%
 }
 
 
-  #openPlayerBtn {
-	position: absolute;
-    font-size: 25px;
-    cursor: pointer;
-	background-image: url("trip.jpg");
-	background-size: cover;
-	top: 80%;
-	
-	  
-}
-
-#musicPlayerWindow {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 .player {
-    margin-bottom: 20px;
+  background: rgb(15,9,19);
+  background: linear-gradient(90deg, rgba(15,9,19,1) 0%, rgba(0,0,0,1) 14%, rgba(115,98,73,1) 60%, rgba(252,176,69,1) 100%);
+  border-radius: 10px;
+  right: 0;
+  bottom: 0;
+  position: absolute;
 }
 
-#musicPlayerWindow.hidden {
-    display: none;
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.controls button {
-    padding: 10px;
-    margin: 5px;
-    font-size: 24px;
-    background-color: #555;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.player button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
-.controls button:hover {
-    background-color: #777;
+input[type="range"] {
+  width: 200px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #444;
+  height: 5px;
+  border-radius: 5px;
 }
 
-#closePlayerBtn {
-    background-color: #e74c3c;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
 }
 
-#closePlayerBtn:hover {
-    background-color: #c0392b;
+input[type="range"]:focus {
+  outline: none;
 }
-
-.music-player-container{
-	position: absolute;
-	top: 80%;
-	background-color:red;
-	
+		
+		#volumeControl{
+			width: 60px;
+			
+		}	
+.zene{
+	position:absolute;
+	top: 50%;
 }

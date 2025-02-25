@@ -102,3 +102,35 @@ $(document).ready(function() {
 });
 
  
+const playPauseBtn = document.getElementById('playPauseBtn');
+const audioPlayer = document.getElementById('audioPlayer');
+const volumeControl = document.getElementById('volumeControl');
+const progressBar = document.getElementById('progressBar');
+
+// Play / Pause functionality
+playPauseBtn.addEventListener('click', () => {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    playPauseBtn.textContent = '⋡';
+  } else {
+    audioPlayer.pause();
+    playPauseBtn.textContent = '⋉';
+  }
+});
+
+// Volume control
+volumeControl.addEventListener('input', () => {
+  audioPlayer.volume = volumeControl.value;
+});
+
+// Update progress bar
+audioPlayer.addEventListener('timeupdate', () => {
+  const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+  progressBar.value = progress;
+});
+
+// Allow seeking in the audio
+progressBar.addEventListener('input', () => {
+  const seekTime = (progressBar.value / 100) * audioPlayer.duration;
+  audioPlayer.currentTime = seekTime;
+});

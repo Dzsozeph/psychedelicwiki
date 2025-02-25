@@ -626,6 +626,7 @@ background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 85
 
 }
 
+
 #lysergamide a{
 	display: inline-block; /* Sorba rendezés */
     text-align: center; /* Középre igazítás */
@@ -696,6 +697,17 @@ display:none;
   transition: transform 2s ease; /* Átmenet a transform-ra */
 }
 
+
+.submenu-content-2{
+	 display: none;
+}
+
+.submenu-content-2:hover{
+	 display: inline-block;
+	padding: 30px;
+	 
+	  
+}
 
 .submenu-content a:hover {
 	 transform: scale(1.06); /* Méretezés hover állapotban */

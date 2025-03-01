@@ -57,17 +57,21 @@
 	  font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 	  font-weight: 300;
 	  text-shadow: 0 0 10px white;
+		
 	  
     }
 
+
     nav {
-	  position:relative;
+	  position:sticky;
       text-align: center;
 	  background: rgb(15,9,19);
       background: linear-gradient(90deg, rgba(15,9,19,1) 0%, rgba(0,0,0,1) 14%, rgba(115,98,73,1) 60%, rgba(252,176,69,1) 100%);
 	  margin-top: 15vh;
 
     }
+
+
 
     nav a {
       text-decoration: none;

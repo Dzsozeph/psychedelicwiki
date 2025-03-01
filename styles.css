@@ -79,6 +79,7 @@ html{
 	padding: 0;
 	position: relative;
 	background-size: cover; /* hogy a képek kitöltsék a teljes teret */
+	background-position: center;
     animation: changeBackground 120s infinite; /* animáció, ami 10 másodpercenként váltja a háttérképet */
     background-color: black;
 	background-repeat: no-repeat;
@@ -123,14 +124,16 @@ body {
 .top-bar {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px; /* Vékony csík magassága */
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(61,61,62,1) 100%);
+  width: 100vw;
+  height: 20vh; /* Vékony csík magassága */
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 96%, rgba(255,141,0,1) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0.9;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 62%, 75% 85%, 23% 85%, 0 62%, 0 0);
+  box-shadow: 0 0 2px orange;
 }
 
 .logo-container {
@@ -148,7 +151,7 @@ body {
 
 .logo-container:hover {
 	transform: scale(1.1); /* 1.5-szörösére nagyítja az elemet */
-	box-shadow: 0 0 100px orange;
+	box-shadow: 0 0 30px orange;
 	border-radius: 200px;
 }
 
@@ -192,24 +195,24 @@ body {
 	visibility: hidden;
 	transition: opacity 0.5s ease, visibility 0.5s ease;
 	position: absolute;
-	top: 250px; /* A konténer aljára kerül */
+	top: 25vh; /* A konténer aljára kerül */
 	left: 0;
-	width: 300px;
+	width: 15vw;
 	min-height: 315px;
-	padding: 10px;
 	background-color: rgba(0,0,0,0.8);
 	border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 	list-style: none;
 	display: inline; 
+	box-shadow: 0 0 2px orange;
+	background-image: url("mandala2.PNG");
 }
 
 
 .drpdwn2 > li {
     position: relative;
-	width: 200px;
-	left: 100px;
-	box-shadow: 0 4px 10px rgba(128, 128, 128, 0.5); /* Szürke árnyék */
+	margin-left: 5vw;
+	box-shadow: 0 0 2px orange; /* Szürke árnyék */
 
 }
 .drpdwn2 li a {
@@ -228,6 +231,8 @@ background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 85
   margin-right: 0.5vw; /* Az ikon és a szöveg közötti távolság */
 }
 
+
+
 .drpdwn2 > li > a {
     display: block;
     padding: 15px 15px;
@@ -239,6 +244,8 @@ background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 85
 .drpdwn2 > li > a:hover {
     background-color: #444;
 }
+
+
 
 .submenu-icon {
     width: 55px;   /* Ikon mérete */
@@ -368,6 +375,7 @@ height: 45px;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
 	opacity: 0.6;
+	
 }
 
 .video-container {
@@ -396,15 +404,12 @@ height: 45px;
 
 .nav-2 {
   position: absolute;
-  top: 70px;
-  left: 16%;
-  width: 70%;
-  min-height: 70px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(61,61,62,1) 100%);
-  opacity: 0.8;
-  box-shadow: 0  10px #f5b041;
+  top: 15vh;
+  width: 60vw;
+  min-height: 0.5vh;
+  opacity: 0.9;
+  box-shadow: 0 0 2px #f5b041;
+  margin: 0 auto;
 
 }
 
@@ -415,6 +420,7 @@ height: 45px;
     margin: 40px; /* Margó a keresősáv körül */
 	right: 0px;
 	z-index: 100;
+	top: 0;
 	
 }
 
@@ -468,9 +474,6 @@ height: 45px;
   padding: 30px;
 }
 
-.dropbtn:hover {
-	color: gold;
-}
 .menu-icon-1{
 	position:absolute;
 	top: -70px;
@@ -558,7 +561,6 @@ height: 45px;
     left: 0;
     right: 0;
     bottom: 30px;
-    height: 10px; /* Az aláhúzás vastagsága */
     background: linear-gradient(
         to right,
         rgba(255, 0, 0, 0.6) 0%,
@@ -571,10 +573,11 @@ height: 45px;
     );
    height: 0; /* Alapértelmezett állapotban ne legyen látható */
    transition: height 0.3s; /* Animáció az aláhúzás megjelenítéséhez */
+   border-radius: 3rem;
 }
 
 .gradient-underline:hover::after {
-    height: 3px; /* Aláhúzás megjelenítése hover esetén */
+    height: 0.300rem; /* Aláhúzás megjelenítése hover esetén */
 }
 
 #button2:hover {
@@ -819,7 +822,7 @@ background: radial-gradient(circle, rgba(15,101,36,1) 26%, rgba(39,120,59,1) 49%
 
 #musicPlayer {
     position: fixed;
-    bottom: 50px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     background-color: #333;
@@ -1008,5 +1011,7 @@ input[type="range"]:focus {
 		}	
 .zene{
 	position:absolute;
-	top: 50%;
+	bottom: 0;
+	right: 0%;
+	
 }
